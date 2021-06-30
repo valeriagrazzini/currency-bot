@@ -1,0 +1,18 @@
+FROM node:10.15.3
+
+WORKDIR /src
+
+ENV DB_NAME=$DB_NAME_ARG
+ENV DB_USER=$DB_USER_ARG
+ENV DB_PASSWORD=$DB_PASSWORD_ARG
+ENV DB_HOST=$DB_HOST_ARG
+
+COPY package*.json ./
+
+RUN npm ci --only=production
+
+COPY . .
+
+ENTRYPOINT ["babel-node", "src/index.js"]
+
+CMD [ "babel-node", "index.js" ]
