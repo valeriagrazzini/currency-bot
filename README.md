@@ -122,7 +122,7 @@ you can specify the value for the params directly in the command line as followi
 
 -  `signalEvent.js` - is the event class derived from EventEmitter
 
--  `signalEventHandler.js` - is the function attached to the signalEvent Listener. It saves de bot data into the database.
+-  `signalEventHandler.js` - is the function attached to the signalEvent Listener. It saves the bot data into the database.
 
 to run the tests, in the terminal run the command:
 
